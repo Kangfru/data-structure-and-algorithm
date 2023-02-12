@@ -1,4 +1,4 @@
-package chap04.queue;
+package structure.chap04.queue;
 
 public class IntQueue {
     private int max; // 큐의 용량

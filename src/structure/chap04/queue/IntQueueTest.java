@@ -1,4 +1,4 @@
-package chap04.queue;
+package structure.chap04.queue;
 
 import java.util.Scanner;
 

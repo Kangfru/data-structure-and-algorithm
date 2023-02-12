@@ -1,4 +1,4 @@
-package chap02;
+package structure.chap02;
 
 public class PrimeNumber3 {
 

@@ -1,4 +1,4 @@
-package chap03;
+package structure.chap03;
 
 import java.util.Arrays;
 import java.util.Scanner;

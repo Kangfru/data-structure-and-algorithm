@@ -1,4 +1,4 @@
-package chap04.stack;
+package structure.chap04.stack;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package chap01;
+package structure.chap01;
 
 public class Question2 {
 

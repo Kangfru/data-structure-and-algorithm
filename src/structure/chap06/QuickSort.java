@@ -36,6 +36,30 @@ public class QuickSort {
         quickSort(a, 0, n - 1);
     }
 
+    static void quickSorta(int[] a) {
+        int start = 0;
+        int end = a.length - 1;
+        quickSorta(a, start, end);
+    }
+
+    static void quickSorta(int[] a, int start, int end) {
+        int pivot = (start + end) / 2;
+        int pivotStart = start;
+        int pivotEnd = end;
+
+        while (pivotStart <= pivotEnd) {
+            while (a[pivotStart] < a[pivot]) pivotStart++;
+            while (a[pivotEnd] > a[pivot]) pivotEnd--;
+            if (pivotStart <= pivotEnd) {
+                swap(a, pivotStart, pivotEnd);
+                pivotStart++;
+                pivotEnd--;
+            }
+        }
+        if (start < pivotEnd) quickSorta(a, start, pivotEnd);
+        if (pivotStart > end) quickSorta(a, pivotStart, end);
+    }
+
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
 
@@ -49,7 +73,8 @@ public class QuickSort {
             x[i] = stdIn.nextInt();
         }
 //        quickSort(x, 0, nx - 1);
-        quickSort(x, nx);
+//        quickSort(x, nx);
+        quickSorta(x);
 
         System.out.println("정렬결과");
         for (int i = 0; i < nx; i++) {

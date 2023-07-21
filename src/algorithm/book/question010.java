@@ -1,7 +1,6 @@
-package algorithm;
+package algorithm.book;
 
 import java.io.*;
-import java.util.Deque;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 

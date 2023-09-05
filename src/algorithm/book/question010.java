@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
+// boj 11003
 public class question010 {
 
     // -> O(n^2) : 시간초과

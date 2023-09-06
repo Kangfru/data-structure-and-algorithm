@@ -50,8 +50,8 @@ public class question015 {
                 indexE--;
             }
         } while (indexS <= indexE);
-        if (start < indexE) quickSort(arr, start, indexE);
-        if (indexS > end) quickSort(arr, indexS, end);
+        if (start < indexE) quickSort(arr, start, indexE - 1);
+        if (indexS < end) quickSort(arr, indexS, end);
     }
 
     private void swap(int[] arr, int i, int j) {

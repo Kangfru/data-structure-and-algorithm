@@ -21,13 +21,9 @@ public class IntegerToRoman {
             roman.append("CM");
         } else if (carry100 >= 5) {
             roman.append("D");
-            for (int i = 0; i < carry100 - 5; i++) {
-                roman.append("C");
-            }
+            roman.append("C".repeat(carry100 - 5));
         } else {
-            for (int i = 0; i < carry100; i++) {
-                roman.append("C");
-            }
+            roman.append("C".repeat(Math.max(0, carry100)));
         }
         // 10의 자리
         if (carry10 == 4) {
@@ -36,13 +32,9 @@ public class IntegerToRoman {
             roman.append("XC");
         } else if (carry10 >= 5) {
             roman.append("L");
-            for (int i = 0; i < carry10 - 5; i++) {
-                roman.append("X");
-            }
+            roman.append("X".repeat(carry10 - 5));
         } else {
-            for (int i = 0; i < carry10; i++) {
-                roman.append("X");
-            }
+            roman.append("X".repeat(Math.max(0, carry10)));
         }
         // 1의 자리
         if (num == 4) {
@@ -51,13 +43,9 @@ public class IntegerToRoman {
             roman.append("IX");
         } else if (num >= 5) {
             roman.append("V");
-            for (int i = 0; i < num - 5; i++) {
-                roman.append("I");
-            }
+            roman.append("I".repeat(num - 5));
         } else {
-            for (int i = 0; i < num; i++) {
-                roman.append("I");
-            }
+            roman.append("I".repeat(Math.max(0, num)));
         }
         return roman.toString();
     }

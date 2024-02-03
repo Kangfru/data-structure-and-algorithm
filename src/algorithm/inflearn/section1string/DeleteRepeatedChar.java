@@ -18,10 +18,18 @@ public class DeleteRepeatedChar {
         return sb.toString();
     }
 
+    public String solution2(String target) {
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < target.length(); i++) {
+            if (target.indexOf(target.charAt(i)) == i) sb.append(target.charAt(i));
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String target = sc.nextLine();
         DeleteRepeatedChar d = new DeleteRepeatedChar();
-        System.out.println(d.solution(target));
+        System.out.println(d.solution2(target));
     }
 }

@@ -21,9 +21,23 @@ public class DailyTemperatures {
         return answers;
     }
 
+    public int[] pracDailyTemperatures(int[] temperatures) {
+        int[] answers = new int[temperatures.length];
+        Stack<Integer> stack = new Stack<>();
+
+        for (int i = 0; i < temperatures.length; i++) {
+            while (!stack.isEmpty() && temperatures[stack.peek()] < temperatures[i]) {
+                int targetIndex = stack.pop();
+                answers[targetIndex] = i - targetIndex;
+            }
+            stack.push(i);
+        }
+        return answers;
+    }
+
     public static void main(String[] args) {
         DailyTemperatures d = new DailyTemperatures();
-        int[] input = new int[]{73,74,75,71,69,72,76,73};
+        int[] input = new int[]{73, 74, 75, 71, 69, 72, 76, 73};
         for (int temp : d.dailyTemperatures(input)) {
             System.out.println(temp);
         }

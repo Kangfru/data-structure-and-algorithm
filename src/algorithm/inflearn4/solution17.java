@@ -17,7 +17,7 @@ public class solution17 {
 
         // Selection Sort
         // 최소 또는 최대를 찾아 위치를 옮김.
-        for (int i = 1; i < numbers.length(); i++) {
+        for (int i = 0; i < numbers.length(); i++) {
             int max = i;
             for (int j = i + 1; j < numbers.length(); j++) {
                 if (arr[j] > arr[max]) max = j;

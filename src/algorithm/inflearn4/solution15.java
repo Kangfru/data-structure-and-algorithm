@@ -34,7 +34,19 @@ public class solution15 {
 
     // O(n^2) - 매 반복마다 최솟값을 찾아 앞으로 보냄
     public void selectionSort(int[] numbers) {
-        // TODO
+        for (int i = 0; i < numbers.length; i++) {
+            int min = i;
+            for (int j = i + 1; j < numbers.length; j++) {
+                if (numbers[j] < numbers[min]) {
+                    min = j;
+                }
+            }
+            if (numbers[min] < numbers[i]) {
+                int temp = numbers[i];
+                numbers[i] = numbers[min];
+                numbers[min] = temp;
+            }
+        }
     }
 
     // O(n log n) - 반으로 나누고, 정렬하며 합침
